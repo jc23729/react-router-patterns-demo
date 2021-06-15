@@ -10,7 +10,7 @@ function Food() {
   // Use it to access match.
     
   const { name } = useParams();
-
+  
   const [src, setSrc] = useState(null);
 
   useEffect(() => {
