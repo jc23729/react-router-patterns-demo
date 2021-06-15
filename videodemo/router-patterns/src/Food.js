@@ -3,12 +3,15 @@ import { useParams } from 'react-router-dom';
 import axios from "axios";
 
 const GIPHY_URL = 'https://api.giphy.com/v1'
+//We setup a component called food
 function Food() {
   const { name } = useParams();
 
   const [src, setSrc] = useState(null);
 
   useEffect(() => {
+    // so we setup a axios request, we need an async function in useEffect
+
     async function fetchGif(searchTerm) {
       try {
         let res = await axios.get(`${GIPHY_URL}/gifs/search`, {
