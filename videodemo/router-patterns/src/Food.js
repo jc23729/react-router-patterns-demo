@@ -39,6 +39,7 @@ function Food() {
   let img = src ? <img src={src} alt={name} /> : null;
   return (
     <div>
+      {/* we're rendering the name here */}
       <h1>Here's a pic of {name}.</h1>
       {img}
     </div>
