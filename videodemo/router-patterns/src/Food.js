@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import axios from "axios";
 
+
+//Giphy api to search for a gif, might need to create free api key
 const GIPHY_URL = 'https://api.giphy.com/v1'
 //We setup a component called food, takes in a prop called name
 function Food() {
@@ -10,7 +12,7 @@ function Food() {
   // Use it to access match.
     
   const { name } = useParams();
-  
+
   const [src, setSrc] = useState(null);
 
   useEffect(() => {
@@ -19,6 +21,7 @@ function Food() {
     async function fetchGif(searchTerm) {
       try {
         let res = await axios.get(`${GIPHY_URL}/gifs/search`, {
+          //we pass in q as a param
           params: { q: searchTerm, api_key: "xNGCvivS4DQzOaDQHCL1w85ZBmwJNe0e" }
         });
         setSrc(res.data.data[0].images.original.url);
