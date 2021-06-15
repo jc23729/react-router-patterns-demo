@@ -10,7 +10,8 @@ function Food() {
   //useParams is one of the Hooks methods that React Router ships with. ...
   // According to the definition in React Router doc, useParams returns: an object of key / value pairs of URL parameters.
   // Use it to access match.
-    
+  
+  //we destructure name to use in params
   const { name } = useParams();
 
   const [src, setSrc] = useState(null);
