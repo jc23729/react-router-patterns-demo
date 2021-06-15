@@ -21,9 +21,10 @@ function Food() {
     async function fetchGif(searchTerm) {
       try {
         let res = await axios.get(`${GIPHY_URL}/gifs/search`, {
-          //we pass in q as a param
+          //we pass in q as a param/searchterm is just an argument we defined on initial render name:taco or burrito 
           params: { q: searchTerm, api_key: "xNGCvivS4DQzOaDQHCL1w85ZBmwJNe0e" }
         });
+        //gets the image as results sets it at index of 0 
         setSrc(res.data.data[0].images.original.url);
       }
       catch (e) {
@@ -32,7 +33,7 @@ function Food() {
     }
     fetchGif(name);
   }, [name]);
-
+//will use that image and render that image
   let img = src ? <img src={src} alt={name} /> : null;
   return (
     <div>
