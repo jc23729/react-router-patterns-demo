@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+//So we loop over the links 
 const defaultFoods = ["burrito", "salad", "sushi", "pasta"];
 function FoodNav({ foods = defaultFoods }) {
   return (
