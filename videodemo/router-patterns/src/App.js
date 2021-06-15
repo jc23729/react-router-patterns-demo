@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="App">
       {/* <FoodNav />
+        //so this is just like express/food route/:name is the parameter 
         <Route path="/food/:name">
           <Food />
         </Route> */}
