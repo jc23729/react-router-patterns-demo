@@ -3,8 +3,12 @@ import { useParams } from 'react-router-dom';
 import axios from "axios";
 
 const GIPHY_URL = 'https://api.giphy.com/v1'
-//We setup a component called food
+//We setup a component called food, takes in a prop called name
 function Food() {
+  //useParams is one of the Hooks methods that React Router ships with. ...
+  // According to the definition in React Router doc, useParams returns: an object of key / value pairs of URL parameters.
+  // Use it to access match.
+    
   const { name } = useParams();
 
   const [src, setSrc] = useState(null);
