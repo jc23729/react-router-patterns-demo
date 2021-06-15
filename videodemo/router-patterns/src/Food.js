@@ -32,6 +32,7 @@ function Food() {
         console.log(e)
       }
     }
+    //we pass in name or fetGif onto searchTerm
     fetchGif(name);
   }, [name]);
 //will use that image and render that image
